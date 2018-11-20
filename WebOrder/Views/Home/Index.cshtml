@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    if (Session["id"] == null)
+    {
+        Response.Redirect("~/Order/Login");
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta   name="viewport" content="width=device-width" />
+    <title>Trang chủ</title>
+</head>
+<body>
+    <div>
+        <h1>Dashboard</h1>
+        <a href="@Url.Action("LogOut","Order")">Đăng xuất</a>
+    </div>
+</body>
+</html>
